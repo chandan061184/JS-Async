@@ -49,10 +49,17 @@ const promise3 = new Promise((resolve,reject)=>{
     }, 2000);
 });
 
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users')
-.then((res)=>res.json());
+// const promise4 = fetch('https://jsonplaceholder.typicode.com/users')
+// .then((res)=>res.json());
 
-Promise.all([promise1, promise2, promise3, promise4])
-.then((values)=>console.log(values));
+// Promise.all([promise1, promise2, promise3, promise4])
+// .then((values)=>console.log(values));
 
 
+// Using Async and await
+async function init(){
+    //Wait untill createPost completes
+    await createPost({title:'Post three', body:'This is post three'});
+    getPost();
+}
+init();

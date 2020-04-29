@@ -1,2 +1,2 @@
 # JS-Async
-Async JavaScript
+Async JavaScript example
